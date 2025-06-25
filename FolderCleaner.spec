@@ -2,11 +2,11 @@
 
 
 a = Analysis(
-    ['folder_cleaner.py'],
+    ['folder_cleaner.py', 'process_manager.py'],
     pathex=[],
     binaries=[],
     datas=[],
-    hiddenimports=[],
+    hiddenimports=['psutil'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

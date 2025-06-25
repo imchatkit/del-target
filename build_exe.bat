@@ -8,7 +8,7 @@ if exist "build" rmdir /s /q "build"
 if exist "folder_cleaner.spec" del "folder_cleaner.spec"
 
 echo 开始编译...
-pyinstaller --onefile --windowed --name=FolderCleaner folder_cleaner.py
+pyinstaller --onefile --windowed --name=FolderCleaner --hidden-import=psutil folder_cleaner.py process_manager.py
 
 if %ERRORLEVEL% EQU 0 (
     echo.
